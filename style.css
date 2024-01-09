@@ -8,6 +8,7 @@ body {
     min-height: 100vh;
     padding: clamp(20px, 5vw, 50px) 20px 10px;
     background: linear-gradient(to right, #e0eafc, #cfdef3);
+    font-family: 'Times New Roman', Times, serif
 }
 
 h1 {
@@ -64,7 +65,7 @@ label,input[type="radio"] {
 
 form button {
     display: block;
-    margin: 70px auto;
+    margin: 35px auto 25px;
     border-radius: 5px;
     background: 200px;
     min-width: 200px;
