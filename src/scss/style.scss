@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "../../node_modules/bootstrap/scss/bootstrap";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.project-name {
+    margin: 20px auto 0;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 10px 20px;
+    max-width: 400px;
+    font-size: 15px;
+
+    @media screen and (min-width: 764px) {
+        font-size: 30px;
+    }
+}
+
+.global-container {
+    border: 1px solid red;
+    height: 100vh;
+}
