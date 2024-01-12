@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/scss/style.css">
-    <title>Quizs</title> 
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/scss/style.css" />
+    <title>Quizs</title>
+  </head>
+  <body>
     <header>Quizz</header>
     <main>
-        <section class="global-container container">
-            <div class="home-content">
-                <h1 class="project-name text-success">The Quizz Game</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, accusamus.</p>
-                <button>Start Quiz</button>
-            </div>
-        </section>
+      <section class="global-container container">
+        <div class="quiz-section">
+          <div class="quiz-box">
+            <h1>Quiz</h1>
+          </div>
+        </div>
+
+        <div class="home">
+          <div class="home-content">
+            <h1 class="project-name text-success">The Quizz Game</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus, accusamus.
+            </p>
+            <button>Start Quiz</button>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <div class="popup-info">
+      <h2>Quiz Guide</h2>
+      <span class="info">1. Lorem ipsum dolor sit amet.</span>
+      <span class="info">1. Lorem ipsum dolor sit amet.</span>
+      <span class="info">1. Lorem ipsum dolor sit amet.</span>
+      <span class="info">1. Lorem ipsum dolor sit amet.</span>
+      <span class="info">1. Lorem ipsum dolor sit amet.</span>
+
+      <div class="btn-group">
+        <button class="info-btn exit-btn">Exit Quiz</button>
+        <a href="#" class="info-btn continue-btn">Continue</a>
+      </div>
+    </div>
+
     <script type="module" src="./src/js/main.js"></script>
-</body>
+  </body>
 </html>
