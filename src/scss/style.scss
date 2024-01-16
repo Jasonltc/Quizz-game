@@ -65,6 +65,16 @@ main {
       display: flex;
       flex-direction: column;
       padding: 20px 30px;
+      opacity: 0;
+      pointer-events: none;
+      scale: 0.9;
+
+      &.active {
+        opacity: 1;
+        pointer-events: auto;
+        scale: 1;
+        transition: 0.233s ease-in 0.5s;
+      }
 
       .box-title {
         font-size: 32px;
@@ -115,6 +125,22 @@ main {
             background-color: rgba(255, 255, 255, 0.1);
             border-color: rgba(255, 255, 255, 0.1);
           }
+
+          &.correct {
+            background-color: #09001d;
+            color: #00a63d;
+            border-color: #00a63d;
+          }
+
+          &.incorrect {
+            background-color: #09001d;
+            color: #a60045;
+            border-color: #a60045;
+          }
+
+          &.disabled {
+            pointer-events: none;
+          }
         }
       }
 
@@ -143,10 +169,119 @@ main {
           font-weight: 600;
           cursor: pointer;
           transition: 0.5s;
+          background: #950170;
+          border: 1px solid;
+          color: #fff;
 
           &:hover {
-            background: #950170;
-            border-color: #950170;
+            background: transparent;
+            border-color: #fff;
+          }
+        }
+      }
+    }
+
+    .result-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      background: transparent;
+      border: 2px solid #c40094;
+      border-radius: 6px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.233s ease-in 0.5s;
+      scale: 0.9;
+
+      &.showResult {
+        scale: 1;
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .quiz-result-title {
+        font-size: 52px;
+      }
+
+      .percentage-container {
+        width: 300px;
+        background: #09001d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0 40px;
+
+        .circular-progress {
+          position: relative;
+          width: 250px;
+          height: 250px;
+          background: conic-gradient(
+            #c40094 3.6deg,
+            rgba(255, 255, 255, 0.1) 0deg
+          );
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 210px;
+            height: 210px;
+            background-color: #09001d;
+            border-radius: 50%;
+          }
+
+          .progress-value {
+            position: relative;
+            font-size: 45px;
+            font-weight: 600;
+          }
+        }
+
+        .score-text {
+          font-size: 26px;
+          font-weight: 600;
+          margin-top: 20px;
+        }
+      }
+
+      .buttons {
+        button {
+          width: 130px;
+          height: 47px;
+          background: #c40094;
+          border: 2px solid #c40094;
+          outline: none;
+          border-radius: 6px;
+          font-size: 16px;
+          color: #fff;
+          font-weight: 600;
+          margin: 0 20px 20px;
+          cursor: pointer;
+        }
+
+        .tryAgain-btn:hover {
+          background: transparent;
+          color: #c40094;
+          transition: all 0.23s ease-in;
+        }
+
+        .go-to-home-btn {
+          background: transparent;
+          color: #c40094;
+          transition: all 0.23s ease-in;
+
+          &:hover {
+            background: #c40094;
+            color: #fff;
           }
         }
       }
