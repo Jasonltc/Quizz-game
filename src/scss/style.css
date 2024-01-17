@@ -12004,6 +12004,7 @@ main {
   color: #fff;
   transition: all 0.233s ease-in;
   min-height: 100vh;
+  overflow: hidden;
 }
 main.active {
   filter: blur(15px);
@@ -12036,13 +12037,17 @@ main.active {
   width: 100%;
   max-width: 500px;
   background-color: transparent;
-  border: 2px solid #c40094;
   display: flex;
   flex-direction: column;
   padding: 20px 30px;
   opacity: 0;
   pointer-events: none;
   scale: 0.9;
+}
+@media screen and (min-width: 764px) {
+  .global-container .quiz-section .quiz-box {
+    border: 2px solid #c40094;
+  }
 }
 .global-container .quiz-section .quiz-box.active {
   opacity: 1;
@@ -12145,7 +12150,6 @@ main.active {
   transform: translate(-50%, -50%);
   width: 500px;
   background: transparent;
-  border: 2px solid #c40094;
   border-radius: 6px;
   padding: 20px;
   display: flex;
@@ -12155,6 +12159,11 @@ main.active {
   pointer-events: none;
   transition: all 0.233s ease-in 0.5s;
   scale: 0.9;
+}
+@media screen and (min-width: 764px) {
+  .global-container .quiz-section .result-box {
+    border: 2px solid #c40094;
+  }
 }
 .global-container .quiz-section .result-box.showResult {
   scale: 1;
@@ -12237,33 +12246,49 @@ main.active {
   align-items: center;
 }
 .global-container .home .home-content {
-  max-width: 600px;
-  border: 1px solid #fff;
-  padding: 20px 30px;
+  max-width: 700px;
+  padding: 20px 15px;
 }
 .global-container .home .home-content .project-name {
   margin: 20px auto;
-  border: 1px solid #000;
   text-align: center;
   padding: 10px 20px;
   max-width: 400px;
-  font-size: 15px;
+  font-size: 25px;
+  color: #c40094;
+  font-weight: 700;
 }
 @media screen and (min-width: 764px) {
   .global-container .home .home-content .project-name {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 .global-container .home .home-content .project-text {
   text-align: center;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 764px) {
+  .global-container .home .home-content .project-text {
+    font-size: 20px;
+  }
 }
 .global-container .home .home-content .start-btn {
-  padding: 10px 20px;
+  padding: 10px 30px;
   outline: none;
-  border: 1px solid;
+  border: 1px solid #c40094;
   margin: 0 auto;
   display: block;
   cursor: pointer;
+  color: #fff;
+  background-color: #09001d;
+}
+@media screen and (min-width: 764px) {
+  .global-container .home .home-content .start-btn {
+    padding: 15px 65px;
+    font-size: 20px;
+  }
 }
 
 .popup-info {
@@ -12281,17 +12306,22 @@ main.active {
   pointer-events: none;
   transition: all 0.233s ease-in;
   z-index: 1;
+  background: #09001d;
 }
 .popup-info .pop-up-title {
   font-size: 30px;
   margin-bottom: 20px;
+  color: #c40094;
+  text-align: center;
 }
 .popup-info .instruction {
   padding-bottom: 20px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
+  color: #fff;
 }
 .popup-info .instruction .info {
   display: block;
+  margin-bottom: 10px;
 }
 .popup-info .btn-group {
   margin: 20px 0 10px;
@@ -12301,10 +12331,16 @@ main.active {
 }
 .popup-info .btn-group .info-btn {
   padding: 10px 20px;
-  border: 1px solid #000;
+  border: 1px solid #c40094;
   outline: none;
   text-decoration: none;
-  color: #000;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 1px;
+}
+.popup-info .btn-group .continue-btn {
+  background-color: #c40094;
+  color: #fff;
 }
 .popup-info.show {
   display: block;
